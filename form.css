@@ -1,0 +1,165 @@
+body {
+    background-image: url('bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    font-size: 2em;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Use flexbox for responsive nav layout */
+.nav-content {
+    display: flex;
+    flex-wrap: wrap;          /* wrap links to next line if needed */
+    justify-content: center;  /* center items horizontally */
+    align-items: center;
+    gap: 1.99em;                 /* space between links */
+    padding: 1em;             /* spacing around nav */
+
+}
+
+.nav-content a {
+    color: white;
+    font-size: 0.7em;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.15s ease;
+    white-space: nowrap; /* prevent text from wrapping mid-word */
+}
+
+.nav-content a:hover {
+    background-color: rgba(176, 109, 0, 0.545);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+/* Make text and nav scale for tablets and small screens */
+@media (max-width: 768px) {
+    body {
+        font-size: 1.5em;
+    }
+    .nav-content a {
+        font-size: 0.8em;
+        padding: 0.4em 0.8em;
+    }
+}
+
+/* Further adjustments for mobile devices */
+@media (max-width: 480px) {
+    body {
+        font-size: 1.2em;
+    }
+    .nav-content {
+        flex-direction: column;
+        gap: 0.7em;
+    }
+    .nav-content a {
+        font-size: 0.9em;
+        padding: 0.6em 1em;
+    }
+}
+
+
+.sign-up-content input, button, a {
+    margin-bottom: 20px;
+}
+
+.to-center {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
+.sign-up {
+    border-radius: 20px;
+    margin-top: 0px;
+   padding: 50px;
+    display: inline-block;
+    box-sizing: border-box;
+    background: rgba(207, 159, 71, 0.077); /* semi-transparent background */
+    backdrop-filter: blur(10px);          /* the magic blur */
+   -webkit-backdrop-filter: blur(10px);  /* for Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.163);
+
+
+}
+
+h2 {
+    text-align: center;
+    font-family:sans-serif;
+    color: rgb(249, 228, 206);
+}
+
+
+.sign-up-content input {
+    display: block;
+    
+}
+
+
+.info {
+    font-size: 0.70em;
+    border-radius: 2px;
+    backdrop-filter: blur (10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(101, 53, 11, 0.621);
+    cursor: pointer;
+}
+
+
+button {
+    display: block;
+    justify-self: center;
+    font-size: 0.70em;
+    background-color: rgba(92, 62, 4, 0.703);
+    border: none;
+    backdrop-filter: blur (10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: aliceblue;
+    border-radius: 20px;
+    padding: 10px;
+    transition: 0.20s;
+
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.80;
+}
+
+button:active {
+    transform: scale(1.1);
+} 
+
+.account {
+    font-size: 0.70em;
+    display: block;
+    justify-self: center;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+input {
+    color: aliceblue;
+}
+
+.account:hover {
+    color: blue;
+}  
+
+.account:active {
+    color: rgb(1, 6, 10);
+}
+
+input::placeholder {
+    color: white;
+    opacity: 0.80;
+}
